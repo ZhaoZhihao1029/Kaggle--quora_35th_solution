@@ -17,4 +17,7 @@ https://www.kaggle.com/c/quora-insincere-questions-classification
 + 使用平均词向量代替单一词向量；
     
 + 分别使用 lstm + gru + capsule 和 lstm + gru + attention 网络结构及 cyclical 学习率（CLR）训练4个模型，并对预测结果进行 blending 。
+
+#### 注意：
     
++ 对于可重复实验，有必要为使用随机数生成的任何数据设置随机种子（如果也使用随机数，则包括随机或 numpy）。cuDNN 用的是非确定算法，可以通过语句 torch.backends.cudnn.enabled = False 将其禁用。
